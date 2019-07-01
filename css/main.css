@@ -1,35 +1,44 @@
+
 body {
   background-color: black;
-}
-
-
-p {
+  text-align: center;
   color: white;
+  font-family: sans-serif;
 }
 
-ul {
+.main_board {
+  display: inline-block;
+
+}
+
+.play_board {
+  border: 3px;
+  border-style: dashed;
+  border-color: pink;
+  height: 100px;
+  width: 600px;
+  padding: 50px;
+  background-color: black;
   display: flex;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  justify-content: space-between;
 }
 
-ul li {
-  list-style: none;
-  margin: 0 15px;
-  background: #333;
-  display: block;
-  border-radius: 15px 15px 15px 15px;
+
+#drag_Box{
+  border: 3px;
+  border-color: pink;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
   transition: .5s;
   box-shadow: 0 0 15px #00aeef;
-
 }
 
-ul li:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px #7bc142;
-  cursor: pointer;
+
+#icon_Test{
 }
+
+ .icon_holder {
+   display: flex;
+   justify-content: center;
+ }
