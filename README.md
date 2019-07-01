@@ -1,3 +1,5 @@
+![dg_logo](images/dg_logo_readme.svg)
+
 Music Mixer Project
 
 For the music mixer project we are experimenting with design and web interactivity using html, css, and javascript.

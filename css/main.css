@@ -25,8 +25,6 @@ body {
 
 
 #drag_Box{
-  border: 3px;
-  border-color: pink;
   height: 100px;
   width: 100px;
   border-radius: 50%;
@@ -36,9 +34,22 @@ body {
 
 
 #icon_Test{
+  transition: .5s;
+  box-shadow: 0 0 15px #00aeef;
+  border-radius: 15px 15px 15px 15px;
+  height: 50px;
+  width: 50px;
+
+}
+
+#icon_Test:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #7bc142;
+  cursor: pointer;
 }
 
  .icon_holder {
    display: flex;
-   justify-content: center;
+   justify-content: space-between;
+
  }
