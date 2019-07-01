@@ -1,4 +1,3 @@
-
 body {
   background-color: black;
   text-align: center;
@@ -33,7 +32,7 @@ body {
 }
 
 
-#icon_Test{
+#icon_Test0{
   transition: .5s;
   box-shadow: 0 0 15px #00aeef;
   border-radius: 15px 15px 15px 15px;
@@ -42,11 +41,121 @@ body {
 
 }
 
-#icon_Test:hover {
+#icon_Test0:hover {
   transform: scale(1.1);
   box-shadow: 0 0 15px #7bc142;
   cursor: pointer;
 }
+
+#icon_Test1{
+  transition: .5s;
+  box-shadow: 0 0 15px #00aeef;
+  border-radius: 15px 15px 15px 15px;
+  height: 50px;
+  width: 50px;
+
+}
+
+#icon_Test1:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #7bc142;
+  cursor: pointer;
+}
+
+#icon_Test2{
+  transition: .5s;
+  box-shadow: 0 0 15px #00aeef;
+  border-radius: 15px 15px 15px 15px;
+  height: 50px;
+  width: 50px;
+
+}
+
+#icon_Test2:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #7bc142;
+  cursor: pointer;
+}
+
+#icon_Test3{
+  transition: .5s;
+  box-shadow: 0 0 15px #00aeef;
+  border-radius: 15px 15px 15px 15px;
+  height: 50px;
+  width: 50px;
+}
+
+#icon_Test3:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #7bc142;
+  cursor: pointer;
+}
+
+#icon_Test4{
+  transition: .5s;
+  box-shadow: 0 0 15px #00aeef;
+  border-radius: 15px 15px 15px 15px;
+  height: 50px;
+  width: 50px;
+
+}
+
+#icon_Test4:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #7bc142;
+  cursor: pointer;
+}
+
+#icon_Test5{
+  transition: .5s;
+  box-shadow: 0 0 15px #00aeef;
+  border-radius: 15px 15px 15px 15px;
+  height: 50px;
+  width: 50px;
+
+}
+
+#icon_Test5:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #7bc142;
+  cursor: pointer;
+}
+
+#icon_Test6{
+  transition: .5s;
+  box-shadow: 0 0 15px #00aeef;
+  border-radius: 15px 15px 15px 15px;
+  height: 50px;
+  width: 50px;
+
+}
+
+#icon_Test6:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #7bc142;
+  cursor: pointer;
+}
+
+#icon_Test7{
+  transition: .5s;
+  box-shadow: 0 0 15px #00aeef;
+  border-radius: 15px 15px 15px 15px;
+  height: 50px;
+  width: 50px;
+
+}
+
+#icon_Test7:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #7bc142;
+  cursor: pointer;
+}
+
+
+
+
+
+
 
  .icon_holder {
    display: flex;
