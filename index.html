@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <link rel="stylesheet" href="css/main.css">
 
@@ -7,58 +8,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet">
   <title> dg | Music Mixer</title>
 </head>
 
 <body>
 
-<header>
-<div class="top_bar">
-<img src="images/dg_musicmixer_logo_update.svg" alt="logo">
-</div>
-</header>
+  <header>
+    <div class="top_bar">
+      <img src="images/dg_musicmixer_logo.svg" alt="logo" width="500" >
+    </div>
+  </header>
 
-<div class="main_board">
+  <div class="main_board">
 
-<div class="play_board">
-  <div id="drag_Box" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div class="play_board">
+      <div class="drag_Box" ondrop="drop(event)" ondragover="allowDrop(event)">
+      </div>
+      <div class="drag_Box" ondrop="drop(event)" ondragover="allowDrop(event)">
+      </div>
+      <div class="drag_Box" ondrop="drop(event)" ondragover="allowDrop(event)">
+      </div>
+    </div>
+
+    <div class="play_board2">
+      <div class="drag_Box" ondrop="drop(event)" ondragover="allowDrop(event)">
+      </div>
+      <div class="drag_Box" ondrop="drop(event)" ondragover="allowDrop(event)">
+      </div>
+    </div>
+
+
+    <h2> Click and drag icons below, then place above to play.</h2>
+
+    <div class="moving_icons">
+      <div class="icon_holder">
+
+        <div class="icon1">
+          <img id="icon_Test1" src="images/mixer_icon1.svg" alt="icon_Test" height="70" width="70" draggable="true" ondragstart="drag(event)" onclick="document.getElementById('audio/mixerBeat1.mp3').play();">
+        </div>
+
+        <div class="icon2">
+          <img id="icon_Test2" src="images/mixer_icon2.svg" alt="icon_Test" height="70" width="70" draggable="true" ondragstart="drag(event)" onclick="document.getElementById('audio/mixerBeat2.mp3').play();">
+        </div>
+
+        <div class="icon3">
+          <img id="icon_Test3" src="images/mixer_icon3.svg" alt="icon_Test" height="70" width="70" draggable="true" ondragstart="drag(event)">
+        </div>
+
+        <div class="icon4">
+          <img id="icon_Test4" src="images/mixer_icon4.svg" alt="icon_Test" height="70" width="70" draggable="true" ondragstart="drag(event)">
+        </div>
+
+        <div class="icon5">
+          <img id="icon_Test5" src="images/mixer_icon5.svg" alt="icon_Test" height="70" width="70" draggable="true" ondragstart="drag(event)">
+        </div>
+
+        <div class="icon6">
+          <img id="icon_Test6" src="images/mixer_icon6.svg" alt="icon_Test" height="70" width="70" draggable="true" ondragstart="drag(event)">
+        </div>
+
+        <div class="icon7">
+          <img id="icon_Test7" src="images/mixer_icon7.svg" alt="icon_Test" height="70" width="70" draggable="true" ondragstart="drag(event)">
+        </div>
+
+        <div class="icon8">
+          <img id="icon_Test8" src="images/mixer_icon8.svg" alt="icon_Test" height="70" width="70" draggable="true" ondragstart="drag(event)">
+        </div>
+
+      </div>
+    </div>
+
+
   </div>
-  <div id="drag_Box">
-  </div>
-  <div id="drag_Box">
-  </div>
-  <div id="drag_Box">
-  </div>
-  <div id="drag_Box">
-  </div>
-</div>
 
-<h2> Click and drag icons below, then place above to play.</h2>
-
-<div class= "moving_icons">
-  <div class="icon_holder">
-    <img id="icon_Test0" src="images/mixer_icon1.svg" alt="icon_Test" height="70" width="70" draggable="true" ondragstart="drag(event)" onclick="document.getElementById('EYE.mp3').play();">
-    <img id="icon_Test1" src="images/mixer_icon2.svg" alt="icon_Test" height="70" width="70" draggable="true" ondragstart="drag(event)" onclick="document.getElementById('EYE.mp3').play();">
-    <img id="icon_Test2" src="images/mixer_icon3.svg" alt="icon_Test" height="70" width="70" draggable="true" ondragstart="drag(event)">
-    <img id="icon_Test3" src="images/mixer_icon4.svg" alt="icon_Test" height="70" width="70" draggable="true" ondragstart="drag(event)">
-    <img id="icon_Test4" src="images/mixer_icon5.svg" alt="icon_Test" height="70" width="70" draggable="true" ondragstart="drag(event)">
-    <img id="icon_Test5" src="images/mixer_icon6.svg" alt="icon_Test" height="70" width="70" draggable="true" ondragstart="drag(event)">
-    <img id="icon_Test6" src="images/mixer_icon7.svg" alt="icon_Test" height="70" width="70" draggable="true" ondragstart="drag(event)">
-    <img id="icon_Test7" src="images/mixer_icon8.svg" alt="icon_Test" height="70" width="70" draggable="true" ondragstart="drag(event)">
-  </div>
-</div>
-
-
-</div>
-
-<script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 <footer>
-  <p>dg production 2019</p>
+  <p>dg production &copy; 2019</p>
 </footer>
-
-
-
 
 </html>

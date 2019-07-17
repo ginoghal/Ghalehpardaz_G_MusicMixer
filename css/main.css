@@ -5,47 +5,50 @@ body {
   font-family: sans-serif;
 }
 
+h2 {
+  font-family: 'Darker Grotesque', sans-serif;
+}
+
+.top_bar{
+  text-align: center;
+  padding: 50px;
+}
+
+
 .main_board {
   display: inline-block;
-
+  text-align: center;
+  justify-content: center;
 }
 
 .play_board {
-  border: 3px;
-  border-style: dashed;
-  border-color: pink;
-  height: 100px;
-  width: 600px;
-  padding: 50px;
+  height: 200px;
+  width: 800px;
+  padding: 0px;
   background-color: black;
   display: flex;
   justify-content: space-between;
 }
 
-
-#drag_Box{
-  height: 100px;
-   width: 100px;
-   border: 3px solid #ffff;
-   border-radius: 50%;
-   transition: .5s;
-   box-shadow: 0 0 15px #00aeef;
+.play_board2 {
+  height: 200px;
+  width: 600px;
+  padding: 0px;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
 }
 
-
-#icon_Test0{
+.drag_Box{
+  height: 100px;
+  width: 100px;
+  border: 3px solid #ffff;
+  border-radius: 50%;
   transition: .5s;
   box-shadow: 0 0 15px #00aeef;
-  border-radius: 15px 15px 15px 15px;
-  height: 50px;
-  width: 50px;
+  padding: 35px; /* if size is made bigger it will exit the playboard containers*/
 
-}
-
-#icon_Test0:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px #7bc142;
-  cursor: pointer;
 }
 
 #icon_Test1{
@@ -152,9 +155,20 @@ body {
   cursor: pointer;
 }
 
+#icon_Test8{
+  transition: .5s;
+  box-shadow: 0 0 15px #00aeef;
+  border-radius: 15px 15px 15px 15px;
+  height: 50px;
+  width: 50px;
 
+}
 
-
+#icon_Test8:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #7bc142;
+  cursor: pointer;
+}
 
 
 
@@ -163,3 +177,7 @@ body {
    justify-content: space-between;
 
  }
+
+footer {
+  margin-top: 150px;
+}
