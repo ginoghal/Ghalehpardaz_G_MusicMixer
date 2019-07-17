@@ -20,7 +20,7 @@ console.log('fired!');
 
 
 
-var audio = new Audio('EYE.mp3'); audio.play();
+var audio = new Audio('audio/mixerBeat1.mp3'); audio.play();
 
  dropZones.forEach(zone => {
  zone.addEventListener("drag_Box", function(e) {
