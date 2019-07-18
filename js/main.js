@@ -20,14 +20,22 @@ console.log('fired!');
 
 
 
-var audio = new Audio('audio/mixerBeat1.mp3'); audio.play();
+//var audio = new Audio('audio/mixerBeat1.mp3'); audio.play();
+
+myAudio = new Audio('audio/mixerBeat1.mp3');
+myAudio.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, true);
+myAudio.play();
+
 
  dropZones.forEach(zone => {
  zone.addEventListener("drag_Box", function(e) {
  e.preventDefault();
  console.log('dragged over')
 
- if (this.childElementCount > 2) {return;}
+ if (this.childElementCount > 0) {return;}
  console.log('One Item Only');
 });
 
@@ -35,7 +43,7 @@ var audio = new Audio('audio/mixerBeat1.mp3'); audio.play();
  zone.addEventListener("drop", function(e){
  e.preventDefault(); // dont do your default behaviour instead do the following (console log)
  console.log('you dropped something over me')
- if (this.childElementCount > 1) {return; }
+ if (this.childElementCount > 0) {return; }
  console.log('one child family, go away!');
 
 

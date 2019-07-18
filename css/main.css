@@ -201,6 +201,32 @@ h2 {
 
  }
 
+ .icon_holder{
+   border-bottom: 800px;
+   border-width: 1px;
+   border-style: solid;
+   animation: colorchange 30s infinite; /* animation-name followed by duration in seconds*/
+        /* you could also use milliseconds (ms) or something like 2.5s */
+     -webkit-animation: colorchange 30s infinite; /* Chrome and Safari */
+   }
+
+   @keyframes colorchange
+   {
+     0%   {border-color: #00ff9f;}
+     25%  {border-color: #00b8ff;}
+     50%  {border-color: #d600ff;}
+     75%  {border-color: #bd00ff;}
+     100% {border-color: #001eff;}
+   }
+
+   @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+   {
+     0%   {border-color: #00ff9f;}
+     25%  {border-color: #00b8ff;}
+     50%  {border-color: #d600ff;}
+     75%  {border-color: #bd00ff;}
+     100% {border-color: #001eff;}
+   }
 footer {
   margin-top: 150px;
 }
