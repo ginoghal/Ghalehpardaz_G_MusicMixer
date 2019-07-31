@@ -201,6 +201,25 @@ h2 {
 
  }
 
+
+   /*@keyframes colorchange
+   {
+     0%   {border-color: #00ff9f;}
+     25%  {border-color: #00b8ff;}
+     50%  {border-color: #d600ff;}
+     75%  {border-color: #bd00ff;}
+     100% {border-color: #001eff;}
+   }
+
+   @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+  /* {
+     0%   {border-color: #00ff9f;}
+     25%  {border-color: #00b8ff;}
+     50%  {border-color: #d600ff;}
+     75%  {border-color: #bd00ff;}
+     100% {border-color: #001eff;}
+   }*/
+   
 footer {
   margin-top: 150px;
 }
