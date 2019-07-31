@@ -17,12 +17,16 @@ console.log('fired!');
    var data = ev.dataTransfer.getData("icon");
    ev.target.appendChild(document.getElementById(data));
 
-
-
-
 //var audio = new Audio('audio/mixerBeat1.mp3'); audio.play();
 
 myAudio = new Audio('audio/mixerBeat1.mp3');
+myAudio.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, true);
+myAudio.play();
+
+myAudio = new Audio('audio/mixerBeat2.mp3');
 myAudio.addEventListener('ended', function() {
     this.currentTime = 0;
     this.play();
@@ -35,7 +39,14 @@ myAudio.play();
  e.preventDefault();
  console.log('dragged over')
 
- if (this.childElementCount > 0) {return;}
+ //if (this.childElementCount > 0) {return;}
+ if(zone.childElementCount == 0) {
+
+   zone.classList.remove();
+   zone.classList.add("drag_Box");
+
+   e.target.appendChild(document.querySelector(`#${draggedElement}`));
+ }
  console.log('One Item Only');
 });
 
