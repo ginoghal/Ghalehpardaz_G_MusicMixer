@@ -3,6 +3,10 @@ body {
   text-align: center;
   color: white;
   font-family: sans-serif;
+  background-image: url(../images/mixerBackground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
 }
 
 h2 {
@@ -25,7 +29,6 @@ h2 {
   height: 200px;
   width: 800px;
   padding: 0px;
-  background-color: black;
   display: flex;
   justify-content: space-between;
 }
@@ -34,7 +37,6 @@ h2 {
   height: 200px;
   width: 600px;
   padding: 0px;
-  background-color: black;
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
@@ -219,7 +221,7 @@ h2 {
      75%  {border-color: #bd00ff;}
      100% {border-color: #001eff;}
    }*/
-   
+
 footer {
   margin-top: 150px;
 }
