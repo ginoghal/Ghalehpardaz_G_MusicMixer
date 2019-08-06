@@ -2,8 +2,8 @@
 
 console.log('fired!');
 
- icon_holder = document.querySelectorAll('icon_holder');
- drag_Box = document.querySelectorAll('#drag_Box');
+ icon_holder = document.querySelectorAll('.icon_holder'),
+ draggablePieces = document.querySelectorAll('.icon_holder img'),
  dropZones = document.querySelectorAll('.drag_Box');
 
  function allowDrop(ev){
@@ -15,8 +15,8 @@ console.log('fired!');
  }
 
 
- document.addEventListener("dragover", function(event) {
-  event.preventDefault();
+ document.addEventListener("dragover", function(ev) {
+  ev.preventDefault();
 });
 
  function drop(ev){
@@ -24,7 +24,15 @@ console.log('fired!');
    ev.target.appendChild(document.getElementById(data));
  }
 
-//var audio = new Audio('audio/mixerBeat1.mp3'); audio.play();
+
+draggablePieces.forEach(piece => {
+  piece.addEventListener("dragstart", function(ev) {
+    console.log('draggin...');
+    ev.dataTransfer.setData("img", this.id);
+  })
+});
+
+
 
  dropZones.forEach(zone => {
  zone.addEventListener("dragover", function(ev){
@@ -41,8 +49,22 @@ console.log('fired!');
    return;
 }
 
- myAudio = new Audio('audio/mixerBeat1.mp3');
- myAudio = new Audio('audio/mixerBeat2.mp3');
+//debugger;
+
+console.log(ev.dataTransfer.getData('img'));
+
+let targetAudio = document.querySelector(`#${ev.dataTransfer.getData('img')}`).dataset.audio;
+
+console.log(targetAudio);
+
+  //debugger;
+
+  myAudio = document.createElement('audio');
+  myAudio.src = targetAudio;
+
+  myAudio.loop = "true";
+
+  document.body.appendChild(myAudio);
 
  myAudio.loop = "true"; document.body.appendChild(myAudio);
  myAudio.play();
