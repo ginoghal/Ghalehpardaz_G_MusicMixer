@@ -2,9 +2,10 @@
 
 console.log('fired!');
 
- icon_holder = document.querySelectorAll('icon_holder');
- drag_Box = document.querySelectorAll('#drag_Box');
- dropZones = document.querySelectorAll('.drag_Box');
+ let  icon_holder = document.querySelectorAll('.icon_holder'),
+      draggablePieces = document.querySelectorAll('.icon_holder img'),
+      dropZones = document.querySelectorAll('.drag_Box');
+
 
  function allowDrop(ev){
    ev.preventDefault();
@@ -14,9 +15,8 @@ console.log('fired!');
    ev.dataTransfer.setData("img",ev.target.id);
  }
 
-
- document.addEventListener("dragover", function(event) {
-  event.preventDefault();
+ document.addEventListener("dragover", function(ev) {
+  ev.preventDefault();
 });
 
  function drop(ev){
@@ -24,7 +24,13 @@ console.log('fired!');
    ev.target.appendChild(document.getElementById(data));
  }
 
-//var audio = new Audio('audio/mixerBeat1.mp3'); audio.play();
+draggablePieces.forEach(piece => {
+  piece.addEventListener("dragstart", function(ev) {
+    console.log('draggin...');
+    ev.dataTransfer.setData("img", this.id);
+  })
+});
+
 
  dropZones.forEach(zone => {
  zone.addEventListener("dragover", function(ev){
@@ -41,22 +47,38 @@ console.log('fired!');
    return;
 }
 
- myAudio = new Audio('audio/mixerBeat1.mp3');
- myAudio = new Audio('audio/mixerBeat2.mp3');
+//debugger;
 
- myAudio.loop = "true"; document.body.appendChild(myAudio);
- myAudio.play();
- let data = ev.dataTransfer.getData("img");
+console.log(ev.dataTransfer.getData('img'));
+
+
+ let targetAudio = document.querySelector(`#${ev.dataTransfer.getData('img')}`).dataset.audio;
+
+ console.log(targetAudio);
+
+ //debugger;
+
+  myAudio = document.createElement('audio');
+  myAudio.src = targetAudio;
+
+  myAudio.loop = "true";
+
+  document.body.appendChild(myAudio);
+
+   // var myAudio = document.querySelector(`audio[data-audio="${targetAudio}"]`);
+   // myAudio.currentTime = 0;
+   // myAudio.play();
+
+
+   myAudio.loop = "true"; document.body.appendChild(myAudio);
+   myAudio.play();
+   let data = ev.dataTransfer.getData("img");
 
 
  ev.target.appendChild(document.querySelector(`#${data}`));
+
  })
 
 });
 
 })();
-
-
-
-
-//debugger
