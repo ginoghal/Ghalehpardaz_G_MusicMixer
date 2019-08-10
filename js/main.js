@@ -28,11 +28,20 @@ console.log('fired!');
 draggablePieces.forEach(piece => {
   piece.addEventListener("dragstart", function(ev) {
     console.log('draggin...');
+
     ev.dataTransfer.setData("img", this.id);
   })
 });
 
+//stop window from opening when icons are outside of dropzone
+window.addEventListener("dragover",function(ev){
+  ev.preventDefault();
+},false);
 
+window.addEventListener("drop",function(ev){
+
+  ev.preventDefault();
+},false);
 
  dropZones.forEach(zone => {
  zone.addEventListener("dragover", function(ev){
