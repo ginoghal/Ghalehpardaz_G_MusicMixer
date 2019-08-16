@@ -51,10 +51,10 @@ window.addEventListener("drop",function(ev){
 
 
  ev.preventDefault(); // dont do your default behaviour instead do the following (console log)
- console.log('you dropped something over me');
+ console.log('you dropped a track on me');
 
  if (this.childElementCount > 0) {
-   console.log('one child family, go away!');
+   console.log('one track only please!');
    return;
 }
 
@@ -80,12 +80,14 @@ console.log(targetAudio);
  let data = ev.dataTransfer.getData("img");
 
 
+
  ev.target.appendChild(document.querySelector(`#${data}`));
 
 
  })
 
 });
+
 
 })();
 
