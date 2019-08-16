@@ -205,15 +205,25 @@ h2 {
 
  }
 
+ button#refresh:hover{
+   box-shadow: 0 0 15px #CA0248;
+   cursor: pointer;
+}
+
+
  button#refresh{
+   cursor: pointer;
    height: 40px;
    width: 150px;
    text-align: center;
    margin-top: 50px;
-   background-color: #00aeef;
+   background-color: #091116;
    font-size: 15px;
+   transition: .5s;
+   box-shadow: 0 0 15px #00aeef;
+   border-radius: 15px 15px 15px 15px;
+   color: white;
  }
-
 
 
 footer {
